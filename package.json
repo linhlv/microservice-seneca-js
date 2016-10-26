@@ -1,0 +1,22 @@
+{
+  "name": "microservice-seneca-js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/linhlv/microservice-seneca-js.git"
+  },
+  "author": "Linh Le",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/linhlv/microservice-seneca-js/issues"
+  },
+  "homepage": "https://github.com/linhlv/microservice-seneca-js#readme",
+  "dependencies": {
+    "seneca": "^3.2.2"
+  }
+}
