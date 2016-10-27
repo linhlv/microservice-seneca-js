@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>nowjs test</title>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"></script>        
+    <script src="https://cdn.socket.io/socket.io-1.4.5.js"></script>
+  </head>
+
+  <body>
+    <div id="messages"></div>
+    <input type="text" id="text-input">
+    <input type="button" value="Send" id="send-button">
+    <script>
+      function guid() {
+        function s4() {
+          return Math.floor((1 + Math.random()) * 0x10000)
+            .toString(16)
+            .substring(1);
+        }
+        return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+          s4() + '-' + s4() + s4() + s4();
+      }
+      
+      $(document).ready(function(){
+        var socket = io('http://microservice-seneca-js-linhle.codeanyapp.com:3210/');
+        socket.on('connect', function(){
+          console.log('connected.');
+          console.log('registering to listen...');
+          socket.emit('register', {
+            id: '' + guid()
+          });
+        });
+        
+        socket.on('event', function(data){
+          console.log('event fired') 
+        });
+        
+        socket.on('disconnect', function(){
+          console.log('disconnecting to server') 
+        });
+        
+        socket.on('message', function(data){
+          console.log(data);
+        });
+        
+        socket.on('registered', function(data){
+          console.log(data);
+        });
+        
+        
+        $("#text-input").focus();
+      });
+    </script>
+    
+    
+  </body>
+</html>
