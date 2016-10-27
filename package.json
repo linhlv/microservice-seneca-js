@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/linhlv/microservice-seneca-js#readme",
   "dependencies": {
+    "now": "^0.26.0",
     "seneca": "^3.2.2"
   }
 }
