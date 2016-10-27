@@ -39,6 +39,10 @@
           console.log('disconnecting to server') 
         });
         
+        socket.on('received', function(data){
+          console.log(data);
+        });
+        
         socket.on('message', function(data){
           console.log(data);
         });

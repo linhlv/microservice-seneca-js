@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/linhlv/microservice-seneca-js#readme",
   "dependencies": {
+    "amqplib": "^0.4.2",
     "now": "^0.26.0",
     "seneca": "^3.2.2",
     "socket.io": "^1.5.1"
