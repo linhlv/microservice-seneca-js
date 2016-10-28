@@ -2,7 +2,7 @@ var http = require('http');
 var fs = require('fs');
 
 //Lets define a port we want to listen to
-const PORT=1337; 
+const PORT=1340; 
 
 var httpServer = http.createServer(function (req, res) {
   fs.readFile(__dirname + '/client.html', function(err, data){
